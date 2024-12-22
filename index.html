@@ -90,10 +90,10 @@
             grid-template-columns: 1fr;
             text-align: center;
             margin: 0;
+            margin: 20px;
         }
 
-        #logo {
-            margin: 0 auto;
+     
         }
 
         .sot {
@@ -102,8 +102,8 @@
             margin-top: 10px;
         }
 
-        button {
-            margin: 5px 0;
+        div span button {
+            display: none;
         }
 
         nav {
@@ -250,7 +250,7 @@
         }
 
         /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
+        @media (max-width: 968px) {
             section {
                 grid-template-columns: 1fr;
             }
@@ -411,16 +411,19 @@
                 text-align: center;
             }
 
-            .nitin {
-                justify-content: center;
-            }
-
             .niti {
-                width: 150px;
-            }
+            width: 230px;
+            border-radius: 10px;
+        }
+
+        .nitin {
+            display: flex;
+            align-items: flex-end;
+        }
 
             .know {
                 margin: 10px auto;
+                background-color: black;
             }
         }
     </style>
@@ -554,6 +557,11 @@
         .our-c{
             margin-top: 140px;
         }
+        @media{
+            .slide img{
+                width: 100px;
+            }
+        }
     </style>
 
 
@@ -650,6 +658,10 @@
             font-size: 2rem;
             color: rgb(70, 130, 180);
             margin-bottom: 10px;
+        }
+        @media{
+            
+
         }
     </style>
 
@@ -793,45 +805,77 @@
     </main>
 
     <style>
-        footer {
-            background-color: black;
+      footer {
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 50px; /* Reduced padding for better responsiveness */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default 4-column layout */
+    align-items: start; /* Adjusted alignment */
+    gap: 20px; /* Adds space between columns */
+    margin: 0; /* Removes negative margins */
+    margin-top: 50px;
+}
 
-            height: 1100%;
-            color: white;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            padding: 100px;
-            display: grid;
-            grid-template-columns: 6fr 2fr 2fr 1fr;
-            align-items: end;
-            margin: -9px;
-            margin-top: 100px;
-        }
+.footer-brand-name img {
+    width: 50%; /* Adjust image size for responsiveness */
+    padding: 10px;
+}
 
-        .footer-brand-name img {
-            width: 35%;
-            padding: 20px;
-        }
+.footer-brand-name aside {
+    padding-left: 0;
+    display: flex;
+    gap: 15px;
+}
 
-        .footer-brand-name aside {
-            padding-left: 11px;
-        }
+.data {
+    padding-bottom: 9px;
+    font-size: 18px; /* Adjust font size for smaller screens */
+}
 
-        .data~span {
-            display: block;
-            font-size: 15px;
-            color: hwb(0 65% 17%);
-            padding: 4px;
-        }
+.data~span {
+    display: block;
+    font-size: 14px; /* Reduced font size */
+    color: hwb(0 65% 17%);
+    padding: 2px;
+}
 
-        .data {
-            padding-bottom: 9px;
-            font-size: 20px;
-        }
+footer aside span {
+    font-size: 140%; /* Adjust icon size */
+    margin: 10px;
+}
 
-        footer aside span {
-            margin: 20px;
-            font-size: 180%;
-        }
+@media (max-width: 768px) {
+    footer {
+        grid-template-columns: 1fr 1fr; /* Two-column layout for medium screens */
+        padding: 30px; /* Adjust padding */
+    }
+
+    .footer-brand-name img {
+        width: 60%; /* Further reduce image size */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        grid-template-columns: 1fr; /* Single-column layout for small screens */
+        text-align: center; /* Center align content */
+    }
+
+    .footer-brand-name aside {
+        justify-content: center;
+    }
+
+    footer aside span {
+        margin: 5px;
+    }
+
+    .data, .data~span {
+        font-size: 14px; /* Further reduce font size for small screens */
+    }
+}
+
     </style>
     <footer>
         <div>
